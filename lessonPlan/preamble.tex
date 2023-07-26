@@ -1,0 +1,55 @@
+%% Thin is an attempt at a generic preamble that can be called instead of copies 
+%% a bunch of times. Any specific/minor document tweaks can be added to the main document
+%% preamble and should therefore override or add to these settings.
+%%---------------------------------------------------------------------------%%
+
+%%------   page format
+% set text encoding to utf-8
+\usepackage[utf8]{inputenc}
+
+% page margins
+\usepackage[top=0.5in, bottom=0.5in, left=1in, right=1in]{geometry}
+
+% contrl end of line wrap/hyphenation 
+\usepackage{ragged2e}
+
+% More granular control over title format of part, section, subsection, paragragh ...
+\usepackage{titlesec}%custom section formatting
+\usepackage{titling}% custom title formatting
+% Custom section spacing and formatting
+% \titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
+% \titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
+% \titlespacing{\section}{0pt}{3pt}{7pt}
+% \titleformat{\subsection}{\large\bfseries\centering}{}{0em}{\underline}[\rule{3cm}{.2pt}]
+% \titlespacing{\subsection}{0pt}{7pt}{7pt}
+
+% list formatting
+% to use the three basic list in line: just add the package option inline and then the 
+% environments enumerate*, itemize* and description*.
+\usepackage{enumitem} 
+
+%%------ LaTeX mechanics
+\usepackage{subfiles} % allows compile of only subfile
+\usepackage{xifthen}
+
+%%------   debug/development
+\usepackage{blindtext} % Dummy text and tools 
+%\Blindtext [2] [1] % two paragraphs 1 textblock
+
+\usepackage{comment} % adds multiline comments \begin{comment} ... \end{comment}
+
+%%------   math tools
+\usepackage{mathtools} % new, contains amsmath
+\usepackage{upgreek} % better looking Greek
+
+%%------   image/figure tools
+\usepackage{graphicx}
+\graphicspath{ {./images/} } %   implies images dir in current dir
+\usepackage{wrapfig}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+
+%%------ figure/diagram tools
+
+%%------ table tools
+
+%%------

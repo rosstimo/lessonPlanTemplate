@@ -1,0 +1,38 @@
+\documentclass[12pt, letterpaper]{article}
+
+% input standard preamble
+\input{preamble}
+
+%%------ Add document specific/unique preamble settings here:
+
+% add a nice horizontal line under secion  title
+\titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
+% minor space adjustment
+\titlespacing{\section}{0pt}{3pt}{7pt}
+% fix paragraph space
+% \setlength{\parindent}{0in}
+
+% input custom commands
+\input{commands}
+
+\title{50-Minute Lesson Plan Template}
+\author{Your Name}
+\date{Last Updated: \today}
+
+\begin{document}
+
+\maketitle
+
+% \section*{Objective of the Lesson}
+\subfile{objectives}
+
+% \section*{Materials Needed}
+\subfile{Materials}
+
+% \section*{Plan}
+\subfile{planItems}
+
+% \section*{Assessment}
+\subfile{assessment}
+
+\end{document}
