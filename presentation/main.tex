@@ -1,0 +1,42 @@
+\documentclass[aspectratio=169]{beamer} % 16:9 display
+%\documentclass[aspectratio=32]{beamer}   % 3:2 laptop display
+
+\input{preamble}
+\input{theme}
+% \usetheme{Madrid}
+% \usecolortheme{wolverine}
+
+\title[Beamer Template] %optional
+{About the Beamer class in presentation making}
+
+\subtitle{A short story}
+
+\author{Tim Rossiter}
+% \author[Arthur, Doe] % (optional, for multiple authors)
+% {A.~B.~Arthur\inst{1} \and J.~Doe\inst{2}}
+\institute[RCET]
+{
+   % Robotics and Communications Engineering Technology\\
+  Collage of Technology \\
+  Idaho State University
+  }
+
+\date[Section 1] % (optional)
+{Last Update \today}
+
+%\logo{\includegraphics[height=1cm]{overleaf-logo}}
+
+\begin{document}
+  \frame{\titlepage}
+  \subfile{slide01} % example with pauses
+  \subfile{slide02} % another way
+  \subfile{slide03} % text boxes/alerts
+  \subfile{slide04} % image
+  %TODO math example, tiks diagram example
+\end{document}
+
+
+
+% ref
+%https://www.overleaf.com/learn/latex/Beamer#Adding_effects_to_a_presentation
+%https://blog.barisione.org/2007/09/18/torino-a-pretty-theme-for-latex-beamer/
