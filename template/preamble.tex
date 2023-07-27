@@ -1,6 +1,6 @@
 %% Thin is an attempt at a generic preamble that can be called instead of copies 
 %% a bunch of times. Any specific/minor document tweaks can be added to the main document
-%% preamble and should therefore override or add to these settings.
+%% preamble and should therefore override and/or add to these settings.
 %%---------------------------------------------------------------------------%%
 
 %%------   page format
@@ -13,9 +13,10 @@
 % contrl end of line wrap/hyphenation 
 \usepackage{ragged2e}
 
+% \usepackage{titling}% custom title formatting
+
 % More granular control over title format of part, section, subsection, paragragh ...
 \usepackage{titlesec}%custom section formatting
-\usepackage{titling}% custom title formatting
 % Custom section spacing and formatting
 % \titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
 % \titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
@@ -44,7 +45,7 @@
 
 %%------   image/figure tools
 \usepackage{graphicx}
-\graphicspath{ {./images/} } %   implies images dir in current dir
+\graphicspath{ {../images/} } %   implies images dir in current dir
 \usepackage{wrapfig}
 \usepackage[font=scriptsize,labelfont=bf]{caption}
 
