@@ -13,11 +13,9 @@
 % contrl end of line wrap/hyphenation 
 \usepackage{ragged2e}
 
-% \usepackage{titling}% custom title formatting
-
 % More granular control over title format of part, section, subsection, paragragh ...
-\usepackage{titlesec}%custom section formatting
-% Custom section spacing and formatting
+\usepackage{titlesec}
+% Custom section spacing and formatting examples:
 % \titleformat{\part}{\Huge\scshape\filcenter}{}{1em}{}
 % \titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
 % \titlespacing{\section}{0pt}{3pt}{7pt}
@@ -30,14 +28,19 @@
 \usepackage{enumitem} 
 
 %%------ LaTeX mechanics
-\usepackage{subfiles} % allows compile of only subfile
+
+ % allows compile of only subfile
+\usepackage{subfiles}
+
 \usepackage{xifthen}
 
 %%------   debug/development
 \usepackage{blindtext} % Dummy text and tools 
 %\Blindtext [2] [1] % two paragraphs 1 textblock
 
-\usepackage{comment} % adds multiline comments \begin{comment} ... \end{comment}
+ % adds multiline comments
+\usepackage{comment}
+% \begin{comment} ... \end{comment}
 
 %%------   math tools
 \usepackage{mathtools} % new, contains amsmath
