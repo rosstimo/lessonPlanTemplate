@@ -8,7 +8,8 @@
 \usepackage[utf8]{inputenc}
 
 % page margins
-\usepackage[top=0.5in, bottom=0.5in, left=1in, right=1in]{geometry}
+\usepackage[top=0in, bottom=0in, left=0in, right=0in]{geometry}
+% \usepackage[top=0.5in, bottom=0.5in, left=1in, right=1in]{geometry}
 
 % contrl end of line wrap/hyphenation 
 \usepackage{ragged2e}
@@ -32,6 +33,7 @@
  % allows compile of only subfile
 \usepackage{subfiles}
 
+% branch logic
 \usepackage{xifthen}
 
 %%------   debug/development
@@ -51,6 +53,48 @@
 \graphicspath{ {../images/} } %   implies images dir in current dir
 \usepackage{wrapfig}
 \usepackage[font=scriptsize,labelfont=bf]{caption}
+
+\usepackage{background}
+
+% this took some playing around with to get the positioning right
+% I think the origin is the top left corner of the page now
+\backgroundsetup{
+   scale=1,
+   position={0in, 0in},
+   anchor=topleft,
+   nodeanchor= north west,
+   hshift=-1in,
+   vshift=1in,
+   angle=0,
+   opacity=0.5,
+  % contents={\includegraphics[width=\paperwidth,height=\paperheight]{cat.jpg}}
+  % contents={\includegraphics[width=8.5in, height=11in]{cat.jpg}}
+  contents={\includegraphics[width=8.5in]{cat.jpg}}
+}
+% \backgroundsetup{
+% % option                  % Possible Values           % Default Value
+%   pages=all,              % <all|some>                % all
+%   firstpage=false,        % <true|false>              % false
+%   placement=center,       % <center|top|bottom>       % center
+%   contents={Draft},       % text, image, Tikz, etc.   % Draft                % Draft
+%   color=red!45,           % Any valid color           % red!45
+%   angle=60,               % Any -360 to 360           % 60, for center
+%                                                       % 0, for top and bottom
+%   opacity=0.5             % Any 0 to 1                % 0.5
+%   scale=1,                % Any positive value        % 15 for center
+%                                                       % 8 for top and bottom
+%   position={page.center}, % Any valid node            % current page.center for center
+%                           % for placement             % current page.north for top
+%                                                       % current page.south for bottom
+%   anchor={},              % Any implified value       % empty for center
+%                           % node for anchor           % below for top
+%                                                       % above for bottom
+%   nodeanchor=center,      % Any value for node        % center
+%                           % anchor                    % below for top
+%                                                       % above for bottom
+%   hshift=0pt              % Any length.               % 0pt
+%   vshift=0pt              % Any length.               % 0pt
+% }
 
 %%------ figure/diagram tools
 
