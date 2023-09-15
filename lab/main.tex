@@ -1,16 +1,20 @@
 \documentclass[12pt, letterpaper]{article}
 
 % input standard preamble
-% \input{../common/preamble}
+ \input{../common/preamble}
+ 
+ % adjust margins
+ \geometry{margin=1in}
 
-% \usepackage{chngcntr}
-% \counterwithin{table}{section}
-% \usepackage{array}
-%
-% \usepackage{tabularx}
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\usepackage{array}
+
+\usepackage{tabularx}
 % \newcolumntype{L}{>{\raggedright\arraybackslash}X} 
 % \newcolumntype{C}{>{\centering\arraybackslash}X} 
 % \newcolumntype{R}{>{\raggedleft\arraybackslash}X} %%------
+
 
 \title{50-Minute Lesson Plan Template}
 \author{Your Name}
@@ -31,28 +35,30 @@
 
 \maketitle
 
-%
-% \section*{Equipment/Materials}
-% \begin{enumerate}
-%     \item Include a list or reference of all equipment and materials used throughout this block.
-%     \item Add new equipment to your equipment appendix
-% \end{enumerate}
-%
-% \textbf{Part Qty}
-% \begin{itemize}
-%     \item Transistors: 2N3904 (1)
-%     \item Resistors: 3.3k$\Omega$ (2), 820$\Omega$ (1), 120k$\Omega$ (1), 22k$\Omega$ (1), 6.8k$\Omega$ (1), 1.6k$\Omega$ (1)
-%     \item Capacitors: 1$\mu$F (3)
-% \end{itemize}
-%
-% \textbf{Note:} This section contains a design requirement so miscellaneous additional components will be needed.
 
-% \newpage
+\section*{Equipment/Materials}
+\begin{enumerate}
+    \item Include a list or reference of all equipment and materials used throughout this block.
+    \item Add new equipment to your equipment appendix
+\end{enumerate}
 
-% \subfile{objectives}
+\textbf{Part Qty}
+\begin{itemize}
+    \item Transistors: 2N3904 (1)
+    \item Resistors: 3.3k$\Omega$ (2), 820$\Omega$ (1), 120k$\Omega$ (1), 22k$\Omega$ (1), 6.8k$\Omega$ (1), 1.6k$\Omega$ (1)
+    \item Capacitors: 1$\mu$F (3)
+\end{itemize}
 
-% \newpage
+\textbf{Note:} This section contains a design requirement so miscellaneous additional components will be needed.
 
+\newpage
+\subfile{impedanceMatching.tex}
+
+\newpage
+\subfile{swamping.tex}
+
+\newpage
+\subfile{frequencyResponse.tex}
 
 \end{document}
 
