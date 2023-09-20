@@ -14,7 +14,7 @@
 % \newcolumntype{L}{>{\raggedright\arraybackslash}X} 
 % \newcolumntype{C}{>{\centering\arraybackslash}X} 
 % \newcolumntype{R}{>{\raggedleft\arraybackslash}X} %%------
-
+\usepackage{makecell}
 
 \title{50-Minute Lesson Plan Template}
 \author{Your Name}
@@ -42,13 +42,26 @@
     \item Add new equipment to your equipment appendix
 \end{enumerate}
 
-\textbf{Part Qty}
-\begin{itemize}
-    \item Transistors: 2N3904 (1)
-    \item Resistors: 3.3k$\Omega$ (2), 820$\Omega$ (1), 120k$\Omega$ (1), 22k$\Omega$ (1), 6.8k$\Omega$ (1), 1.6k$\Omega$ (1)
-    \item Capacitors: 1$\mu$F (3)
-\end{itemize}
-
+\begin{center}
+    % \caption*{Materials List}
+    \begin{tabularx}{0.8\textwidth}{|X|c|X|c|X|c|}
+      \Xhline{1.5}
+      \textbf{Transistors} & \bf{Qty} & \bf{Resistors} & \bf{Qty} & \bf{Capacitors} & \bf{Qty} \\
+      \Xhline{1.5}
+      2N3904 & 1 & 1.6\kohm & 1 & 1\uF & 1 \\
+      \hline
+      & & 3.3\kohm & 1 & & \\
+      \hline
+      & & 6.8\kohm & 1 & & \\
+      \hline
+      & & 22\kohm & 1 & & \\
+      \hline
+      & & 120\kohm & 1 & & \\
+      \hline
+      & & & & & \\
+      \hline
+    \end{tabularx}
+\end{center}
 \textbf{Note:} This section contains a design requirement so miscellaneous additional components will be needed.
 
 \newpage
