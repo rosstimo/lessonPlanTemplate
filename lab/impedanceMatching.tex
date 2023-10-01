@@ -7,45 +7,99 @@
 
 \subsubsection*{Objectives}
 \begin{enumerate}
-    \item Describe in writing the effects of varying $Z_{\text{out}}$ vs. $R_{\text{L}}$ ratios.
-    \item Demonstrate the ability to accurately represent AC load line(s) with varying $Z_{\text{out}}$ vs. $R_{\text{L}}$ ratios.
-    \item Demonstrate the ability to accurately analyze, predict and measure the effects of varying $Z_{\text{out}}$ vs. $R_{\text{L}}$ ratios.
-    \item Define in writing key terms including but not limited to: Impedance Matched, Swamping, $v_{\text{out max}}$, $v_{\text{in max}}$.
+    \item Describe in writing the effects of varying \zout\ vs. \RL\ ratios.
+    \item Demonstrate the ability to accurately represent AC load line(s) with varying \zout\ vs. \RL\ ratios.
+    \item Demonstrate the ability to accurately analyze, predict and measure the effects of varying \zout\ vs. \RL\ ratios.
+    \item Define in writing key terms including but not limited to: Impedance Matched, Swamping, \voutmax, \vinmax.
 \end{enumerate}
 
 \subsubsection*{Figures/Tables}
 \begin{enumerate}
-    \item Refer to Figure 3-1-1 Universal Biased Common Emitter Amplifier.
-    \item Include the schematic figure, tables and load line together for ease of review and comparison.
+  \item Refer to Figure 3-1-1 Universal Biased Common Emitter Amplifier.
+  \item Include the schematic figure, tables and load line together for ease of review and comparison.
   \item The AC/DC load line will be the primary representation of circuit operation for this section.
 \end{enumerate}
 
 % \subsubsection*{Table 4-1-2: Changing Load Calculations}
 
-\begin{centering}
+% \begin{center}
   \begin{table}[h]
     \caption{Changing Load Calculations}
     % \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
     % \begin{tabular}{|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|}
     \begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|X|X|X|X|}
       \hline
-      $R_{\text{L}}$ & $r'e$ & $Z_{in}$ & $Z_{out}$ & $A_{v}$ & $A_{i}$ & $A_{p}$ & $v_{in_{max}}$ & $v_{out_{max}}$ & $v_{ce_{cut}}$ & $i_{c_{sat}}$ \\
+      \RL & \re & \zin & \zout & \Av & \Ai & \Ap & \vinmax & \voutmax & \vcecut & \icsat  \\
       \hline
-      1.6k$\Omega$ & & & & & & & & & & \\
+      1.6\kohm & & & & & & & & & & \\
       \hline
-      3.3k$\Omega$ & & & & & & & & & & \\
+      3.3\kohm & & & & & & & & & & \\
       \hline
-      6.8k$\Omega$ & & & & & & & & & & \\
+      6.8\kohm & & & & & & & & & & \\
       \hline
     \end{tabularx}
   \end{table}
-\end{centering}
-1k\ohm
 
+   \begin{table}[h]
+    \caption{Changing Load Calculations}
+    % \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+    % \begin{tabular}{|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|m{1cm}|}
+    \begin{tabularx}{0.6\textwidth}{|X|X|X|X|X|}
+      \hline
+      \RL & \Av & \Ai & \Ap & \voutmax \\
+      \hline
+      1.6\kohm & & & &  \\
+      \hline
+      3.3\kohm & & & &  \\
+      \hline
+      6.8\kohm & & & &  \\
+      \hline
+    \end{tabularx}
+  \end{table}
+  % \end{center}
 
-2.2k\ohm
+\newpage
 
+\subsubsection*{Theory of Operation}
+\begin{enumerate}
+  \item Review the derived amplifier formulas from previous sections
+  \item Determine what formulas contain \zout\ and \RL\
+  \item Proper \Av\ measurements will verify predictions and assumptions
+\end{enumerate}
 
-1M\ohm
-\beta = 100
+\subsubsection*{Procedure}
+\begin{enumerate}
+  \item kjhkjh  
+\end{enumerate}
+
+\subsubsection*{Calculations}
+\begin{enumerate}
+    Step by step (check list)
+Calculate Av, Ai, Ap and voutmax when RL = 3.3kΩ
+Calculate Av, Ai, Ap and voutmax when RL = 6.8kΩ
+Calculate Av, Ai, Ap and voutmax when RL = 1.6kΩ
+Use Av and voutmax to calculate vinmax for each load value
+\end{enumerate}
+
+\subsubsection*{Measurements}
+\begin{enumerate}
+For each of the three RL values from above:
+Measure Av with vgen set to half of calculated vinmax or lower and frequency set to 10kHz
+Use the same generator settings for all Av measurements
+Measure/verify voutmax 
+\end{enumerate}
+
+\subsubsection*{Waveforms/Diagrams}
+\begin{enumerate}
+Draw a properly scaled predicted DC and AC load line (big and readable)
+Include DC and all three AC load lines on the same figure (labeled and color coded)
+Include properly aligned and scaled Av measurement waveform for each RL value
+\end{enumerate}
+
+\subsubsection*{Conclusion}
+\begin{enumerate}
+  \item kjhkjh  
+\end{enumerate}
+
+\char{0135}
 \end{document}
