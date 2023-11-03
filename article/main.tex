@@ -1,0 +1,90 @@
+\documentclass[12pt, letterpaper]{article}
+
+% input standard preamble
+\input{../common/preamble}
+
+%%------ Add document specific/unique preamble settings here:
+
+% page margins
+% \usepackage[top=0in, bottom=0in, left=0in, right=0in]{geometry}
+\usepackage[top=1.0in, bottom=1.0in, left=1in, right=1in]{geometry}
+
+% add a nice horizontal line under secion  title
+\titleformat{\section}{\large\bf\raggedright}{}{1em}{}[{\titlerule[0pt]}]
+% minor space adjustment
+\titlespacing{\section}{0pt}{10pt}{7pt}
+% fix paragraph space
+% \setlength{\parindent}{0in}
+
+% input custom commands
+% \input{../common/commands}
+
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{references.bib}
+
+\usepackage[twoside]{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+% \fancyhead[LO,RE]{\textbf{Running head: SHORT TITLE} \hfill \thepage}
+\fancyhf[HCO]{\hfill \textbf{SHORT TITLE} \hfill \thepage}
+\fancyhf[HCE]{\thepage \hfill \textbf{SHORT TITLE} \hfill}
+% \fancyfoot[LE,RO]{\thepage}
+
+\newcommand{\theTitle}{Your APA Style Paper Title}
+\newcommand{\theAuthor}{John Doe}
+\newcommand{\theSubTitle}{Your Subtitle}
+\newcommand{\Assignment}{APA Style Paper}
+\newcommand{\AssignmentDescription}{This is a description of the assignment}
+\newcommand{\CourseNumber}{ENGL3307}
+\newcommand{\CourseName}{Professional and Technical Writing}
+\newcommand{\Professor}{Dr. Ab} 
+\newcommand{\University}{Idaho State University}
+\newcommand{\Semester}{Fall}
+\newcommand{\Year}{2023}
+
+% \title{\theTitle}
+% \author{\theAuthor}
+% \date{}
+
+\begin{document}
+
+% \maketitle
+\subfile{titlepage}
+\newpage
+
+\subfile{abstract}
+
+
+\subfile{introduction}
+% \section{Introduction}
+% Your introduction content. For example, citing a reference \parencite{wang2012}.
+\newpage
+
+
+\subfile{literatureReview}
+% \section{Literature Review}
+% Your literature review content.
+
+\subfile{methods}
+% \section{Methods}
+% Your methods content.
+
+\subfile{results}
+% \section{Results}
+% Your results content.
+
+\subfile{discussion}
+% \section{Discussion}
+% Your discussion content.
+
+\subfile{conclusion}
+% \section{Conclusion}
+% Your conclusion content.
+
+\printbibliography
+
+\end{document}

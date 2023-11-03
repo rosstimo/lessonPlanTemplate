@@ -1,0 +1,30 @@
+\documentclass[main.tex]{subfiles}
+%%------ Preamble specific to this subfile only. This will be used when this document is compiled on its own. When the main document compiles this preabble is ignored. 
+%%---------------------------------------------------------------------------%%
+\begin{document}
+\begin{titlepage}
+    \thispagestyle{empty} % No headers or footers on the title page
+    \begin{center}
+        \vspace*{1cm}
+        \Huge
+        \textbf{\theTitle}\\
+        \vspace{0.5cm}
+        \LARGE
+        \theSubTitle \\
+        \vspace{1.5cm}
+        \Large    
+        \textbf{\theAuthor}\\
+        \vfill
+        \Large
+        \Assignment\\
+        \large
+        \textit{\AssignmentDescription} \\
+        \vspace{0.8cm}
+        \Large
+        \CourseNumber\ --\ \CourseName \\
+        Professor: \Professor\\
+        \University\\
+        \Semester \:\ \Year \\
+    \end{center}
+\end{titlepage}
+\end{document}

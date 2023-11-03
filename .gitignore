@@ -8,4 +8,10 @@
 *.toc
 *.vrb
 *.fls
+*.bbl
+*.bcf
+*.blg
+*.xml
+*.gz
+*.fdb*
 
