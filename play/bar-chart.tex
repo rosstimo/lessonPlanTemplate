@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    enlargelimits=0.15,
+    legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    ylabel={Number of Participants},
+    symbolic x coords={Education,Authority,Experience,Society,Experiments,History,Media,Aliens},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    x tick label style={rotate=45,anchor=east},
+    ]
+\addplot coordinates {(Education,5) (Authority,7) (Experience,4) (Society,6) (Experiments,3) (History,2) (Media,8) (Aliens,1)};
+\legend{Influences}
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
+

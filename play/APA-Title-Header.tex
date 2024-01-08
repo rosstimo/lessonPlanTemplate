@@ -1,0 +1,49 @@
+
+\documentclass{article}
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\addbibresource{references.bib}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[LE,RO]{Running head: SHORT TITLE}
+\fancyfoot[LE,RO]{\thepage}
+
+\title{Exploring the Efficiency of Solar Panels}
+\author{John Doe}
+\affiliation{Tech University}
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty} % No headers or footers on the title page
+\centering
+\vspace*{40mm} % Adjust the vertical space as needed
+{\Large \textbf{\MakeUppercase{\thetitle}}}\\
+\vspace{10mm} % Adjust the vertical space as needed
+{\large \theauthor}\\
+\vspace{5mm} % Adjust the vertical space as needed
+{\large Department of Renewable Energy Engineering}\\
+{\large \theaffiliation}\\
+\vspace{20mm} % Adjust the vertical space as needed
+{\large \textbf{Author Note}}\\
+\vspace{5mm} % Adjust the vertical space as needed
+John Doe, Department of Renewable Energy Engineering, \theaffiliation.\\
+Correspondence concerning this article should be addressed to John Doe, \theaffiliation, 1234 University Way, Tech City, TA 56789. Email: johndoe@techuniversity.edu\\
+\vspace{10mm} % Adjust the vertical space as needed
+{\large Renewable Energy Systems: Design and Analysis}\\
+\vspace{5mm} % Adjust the vertical space as needed
+{\large Dr. Jane Smith}\\
+\vspace{5mm} % Adjust the vertical space as needed
+{\large April 23, 2023}\\
+\end{titlepage}
+
+% The rest of your paper goes here
+
+\end{document}

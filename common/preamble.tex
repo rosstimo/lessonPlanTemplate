@@ -53,25 +53,32 @@
 \graphicspath{ {../images/} } %   implies images dir in current dir
 \usepackage{wrapfig}
 \usepackage[font=normalsize,labelfont=bf]{caption}
-
-\usepackage{background}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=black,
+  urlcolor=black,
+  citecolor=black,
+} % allows hyperlinks
+% \usepackage{background}
 
 % this took some playing around with to get the positioning right
 % I think the origin is the top left corner of the page now
-\backgroundsetup{
-   scale=1,
-   position={0in, 0in},
+% \backgroundsetup{
+   % scale=1,
+   % position={0in, 0in},
    % anchor=left,
    % anchor={below=0pt},
-   nodeanchor= north west,
-   hshift=-1in,
-   vshift=1in,
-   angle=0,
-   opacity=0.5,
+   % nodeanchor= north west,
+   % hshift=-1in,
+   % vshift=1in,
+   % angle=0,
+   % opacity=0.5,
   % contents={\includegraphics[width=\paperwidth,height=\paperheight]{cat.jpg}}
   % contents={\includegraphics[width=8.5in, height=11in]{cat.jpg}}
   % contents={\includegraphics[width=8.5in]{cat.jpg}}
-}
+% }
 % \backgroundsetup{
 % % option                  % Possible Values           % Default Value
 %   pages=all,              % <all|some>                % all
