@@ -32,6 +32,9 @@ cp -rnv .template/.gitignore .
 echo "common" >> .gitignore
 ln -s .template/scripts/useTemplate.sh useTemplate.sh
 echo "useTemplate.sh" >> .gitignore
+ln -s .template/scripts/texcompile.sh texcompile.sh
+echo "texcompile.sh" >> .gitignore
+
 
 # copy specific templates for use in current project. don't overwrite
 # TODO add use flags to mix and match instead always add all
