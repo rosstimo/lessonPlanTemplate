@@ -31,7 +31,7 @@ ln -s .template/common common
 cp -rnv .template/.gitignore .
 echo "common" >> .gitignore
 ln -s .template/scripts/useTemplate.sh useTemplate.sh
-echo "useTemplate.sh" >> useTemplate.sh
+echo "useTemplate.sh" >> .gitignore
 
 # copy specific templates for use in current project. don't overwrite
 # TODO add use flags to mix and match instead always add all
@@ -58,4 +58,3 @@ echo "enjoy!"
 
 
 
-useTemplate.sh
