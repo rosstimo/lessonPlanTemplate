@@ -10,6 +10,9 @@ REMOTE_URL=""
 CURRENT_BRANCH=""
 PROJECT_NAME=""
 PROJECT_PATH=""
+REPO_ROOT=""
+
+
 
 
 # function to Check it the current directory is a git repository if it is store the repo name, remote url, and current branch Name
@@ -24,6 +27,9 @@ isGitRepo() {
     REPO_NAME=$(basename $REMOTE_URL .git)
     # get the current branch name
     CURRENT_BRANCH=$(git branch --show-current)
+    # get the root directory of the repository
+    REPO_ROOT=$(git rev-parse --show-toplevel)
+
   else
     # if git remote get-url origin fails then the current directory is not a git repository
     echo "Current directory is not a git repository"
@@ -64,14 +70,14 @@ initiateTemplateSubmodule() {
   git submodule add $TEMPLATE_REPO_URL .template
   git submodule update --init --recursive
   # link common files and ignore to avoid rogue copies
-  echo "#### Ignore LaTeX template files ####" >> .gitignore
-  echo ".template" >> .gitignore
+  echo "#### Ignore LaTeX template files ####" >> $REPO_ROOT/.gitignore
+  echo ".template" >> $REPO_ROOT/.gitignore
   ln -s .template/common common
-  echo "common" >> .gitignore
+  echo "common" >> $REPO_ROOT/.gitignore
   ln -s .template/scripts/useTemplate.sh useTemplate.sh
-  echo "useTemplate.sh" >> .gitignore
+  echo "useTemplate.sh" >> $REPO_ROOT/.gitignore
   ln -s .template/scripts/texcompile.sh texcompile.sh
-  echo "texcompile.sh" >> .gitignore
+  echo "texcompile.sh" >> $REPO_ROOT/.gitignore
   cp -rnv .template/images images 
 }
 
@@ -95,6 +101,31 @@ existingProject() {
       echo "Error: Failed to change into directory '$1'."
       exit 1
     fi
+  fi
+}
+
+checkStatus() {
+  # Check the status of the project and template repositories.
+  # If the project repository is not a git repository, exit with an error message.
+  # If the template repository is not a git repository, exit with an error message.
+  # If the project repository is not up-to-date with the template repository, exit with an error message.
+  # If the project repository is up-to-date with the template repository, print a success message.
+  isGitRepo
+  git status
+  # if the file .gitmodules then read the file cd into the submodule and git status. if no .gitmodules then exit with message
+  if [ -f .gitmodules ]; then
+    while read line; do
+      if [[ $line == "path"* ]]; then
+        path=$(echo $line | cut -d'=' -f2)
+        cd $path
+        echo "Checking status of submodule: $path"
+        isGitRepo
+        git status
+        cd ..
+      fi
+    done < .gitmodules
+  else
+    echo "No submodules found"
   fi
 }
 
@@ -162,23 +193,7 @@ getOptions() {
         ;;
       c)
         echo "Checking status of project and template repositories"
-        isGitRepo
-        git status
-        # if the file .gitmodules then read the file cd into the submodule and git status. if no .gitmodules then exit with message
-        if [ -f .gitmodules ]; then
-          while read line; do
-            if [[ $line == "path"* ]]; then
-              path=$(echo $line | cut -d'=' -f2)
-              cd $path
-              echo "Checking status of submodule: $path"
-              isGitRepo
-              git status
-              cd ..
-            fi
-          done < .gitmodules
-        else
-          echo "No submodules found"
-        fi
+        checkStatus
         ;;
       \?)
         echo "Invalid option: $OPTARG" 1>&2
