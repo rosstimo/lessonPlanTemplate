@@ -65,7 +65,7 @@ newProject() {
 }
 
 initiateTemplateSubmodule() {
-  # isGitRepo
+  isGitRepo
   # Add the template repository as a Git submodule within the project repository.
   git submodule add $TEMPLATE_REPO_URL .template
   git submodule update --init --recursive
